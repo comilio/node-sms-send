@@ -1,0 +1,16 @@
+{
+  "name": "node-sms-send",
+  "version": "0.0.1",
+  "description": "Sms send package for Comilio",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Petr Vasilev",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  }
+}
