@@ -15,15 +15,15 @@ $ npm install node-sms-send --save
 ```
 
 # Send a message with Classic type
- 
+
 ```js
 const SMS = require('node-sms-send')
 
 const sms = new SMS('username', 'password')
 
-sms.send('+393401486484', 'Hello!')
+sms.send('+393401234567', 'Hello!')
   .then(body => console.log(body)) // returns { message_id: 'string' }
-  .catch(err => console.log(err.message)) 
+  .catch(err => console.log(err.message))
 ```
 
 # Check status of message
@@ -34,7 +34,7 @@ const SMS = require('node-sms-send')
 const sms = new SMS('username', 'password')
 
 sms.status('A95455F7031140769030CCA81E764C5F')
-  .then(body => console.log(body)) // returns [ { phone_number: '+393401486484', status: 'Sent' } ]
+  .then(body => console.log(body)) // returns [ { phone_number: '+393401234567', status: 'Sent' } ]
   .catch(err => console.log(err.message))
 ```
 

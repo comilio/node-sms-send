@@ -1,8 +1,8 @@
 // Check status of sended message
 const SMS = require('../')
 
-const sms = new SMS('nodejs-dev', 'j89w437uu')
+const sms = new SMS('your-username', 'your-password')
 
-sms.status('A95455F7031140769030CCA81E764C5F')
-  .then(body => console.log(body)) // returns [ { phone_number: '+393401486484', status: 'Sent' } ]
+sms.status('your-sent-sms-message_id')
+  .then(body => console.log(body)) // returns [ { phone_number: '+393401234567', status: 'Sent' } ]
   .catch(err => console.log(err.message))
