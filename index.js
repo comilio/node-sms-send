@@ -35,21 +35,26 @@ class SMS {  // Main class
     if (!text || typeof text != 'string') {
       throw new TypeError('Second argument text is required, it must be string')
     }
+    
     let typeArray = ['Smart', 'SmartPro']
-    if (!typeArray.includes(messageType)) {
-      messageType = 'Classic'
-      senderString = undefined
+    let requestBody = {
+          phone_numbers: phoneNumbersArray,
+          text: text,
     }
+    
+    if (!typeArray.includes(messageType)) {
+      requestBody.messageType = 'Classic'
+    }
+    else {
+      requestBody.messageType = messageType
+      requestBody.sender_string = senderString
+    }
+      
     try {
       const response = await request({
         method: 'POST',
         uri: 'https://api.comilio.it/rest/v1/message/',
-        body: {
-          phone_numbers: phoneNumbersArray,
-          message_type: messageType,
-          text: text,
-          // sender_string: senderString
-        },
+        body: requestBody,
         headers: {
           'Authorization': this.authToken,
           'Content-Type': 'application/json; charset=utf-8'
