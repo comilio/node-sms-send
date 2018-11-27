@@ -1,6 +1,6 @@
 {
   "name": "node-sms-send",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "keywords": ["sms", "sms-api", "comilio", "sms-sdk", "sms-gateway", "sms-client"],
   "description": "Sms send package for Comilio",
   "main": "app.js",
