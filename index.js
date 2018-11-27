@@ -43,10 +43,10 @@ class SMS {  // Main class
     }
     
     if (!typeArray.includes(messageType)) {
-      requestBody.messageType = 'Classic'
+      requestBody.message_type = 'Classic'
     }
     else {
-      requestBody.messageType = messageType
+      requestBody.message_type = messageType
       requestBody.sender_string = senderString
     }
       
